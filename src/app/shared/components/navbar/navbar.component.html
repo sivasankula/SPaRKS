@@ -1,13 +1,43 @@
-
-<p>
-    <mat-toolbar color="primary">
-        <div>
-            <button mat-button><mat-icon>view_headline</mat-icon></button>
-        </div>
-       <img src="../../../../assets/postLoginImages/ptlogo.jpg" (click)="navigate()">
-      
-            
-        
-     
-    </mat-toolbar>
-  </p>
+<mat-toolbar class="position-fixed" color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()" class="example-icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span><img src="../../../../assets/postLoginImages/ptlogo.jpg" class="logo"></span>
+  <span class="example-spacer"></span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon class="maticon">account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>account_circle</mat-icon>Profile
+    </button>
+    <button mat-menu-item>
+      <mat-icon>input</mat-icon>Logout
+    </button>
+  </mat-menu>
+</mat-toolbar>
+<mat-sidenav-container [hasBackdrop]="false" class="sidenav" autosize>
+  <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="57" mode="side" opened="false">
+    <mat-nav-list>
+      <a mat-list-item (click)="sidenav.close()">
+        <mat-icon>important_devices</mat-icon>Technologies
+      </a>
+      <a mat-list-item (click)="sidenav.close()">
+        <mat-icon>search</mat-icon>Current Openings
+      </a>
+      <a mat-list-item (click)="sidenav.close()">
+        <mat-icon>supervisor_account</mat-icon>Users
+      </a>
+      <a mat-list-item (click)="sidenav.close()" routerLink="/scheduled-tests">
+        <mat-icon>view_list</mat-icon>Applications
+      </a>
+      <a mat-list-item (click)="sidenav.close()">
+        <mat-icon>question_answer</mat-icon>Questions
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content" (click)="sidenav.close()">
+   
+   
+  </mat-sidenav-content>
+</mat-sidenav-container>
