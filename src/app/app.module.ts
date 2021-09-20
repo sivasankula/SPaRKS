@@ -6,19 +6,19 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PreLoginLayoutComponent } from './shared/layouts/pre-login-layout/pre-login-layout.component';
 import { PostLoginLayoutComponent } from './shared/layouts/post-login-layout/post-login-layout.component';
-import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { SharedModule } from './shared/shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     PreLoginLayoutComponent,
-    PostLoginLayoutComponent,
-    NavbarComponent
+    PostLoginLayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
