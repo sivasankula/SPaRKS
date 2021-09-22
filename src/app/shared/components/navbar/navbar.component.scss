@@ -4,6 +4,15 @@
 .example-spacer {
    flex: 1 1 auto;
  }
+ .search-spacer {
+  flex: 1 1 auto;
+}
+.search-bar {
+  width:30%;
+  margin-top: 50px;
+  margin-left:450px;
+
+}
 .sidenav-content{    
    min-height: 92vh;
    margin-top: 2em;
@@ -37,5 +46,32 @@ a mat-icon {
    z-index: 1000;
  }
 
+ .matPrefix{
+  position: relative;
+  bottom: 3px;
+}
  
- 
+
+
+
+.search-hero {
+  max-width: 500px;
+  padding-bottom: 50px;
+  margin:auto;
+}
+
+.form-control {
+  background-color:rgb(140, 140, 209);
+  // box-shadow: 0 10px 40px 0 #247dfa;
+}
+.form-control:hover{
+  box-shadow: 0 10px 40px 0 #247dfa;
+
+}
+.form-control::placeholder  {
+  font-family: FontAwesome;
+}
+.form-control:focus {
+  background-color: white;
+  opacity: 1; /* Firefox */
+}
