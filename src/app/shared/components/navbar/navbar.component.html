@@ -3,7 +3,17 @@
     <mat-icon>menu</mat-icon>
   </button>
   <span><img src="../../../../assets/postLoginImages/ptlogo.jpg" class="logo"></span>
+  <div class="search-bar">
+
+  <div class="search-hero">
+    <input class="form-control" type="text" name="search" autocomplete="off" placeholder="&#61442; search by employee name with department">
+ 
+</div>
+
+  </div>
+ 
   <span class="example-spacer"></span>
+ 
   <button mat-button [matMenuTriggerFor]="menu">
     <mat-icon class="maticon">account_circle</mat-icon>
   </button>
@@ -37,7 +47,9 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="sidenav-content" (click)="sidenav.close()">
-   
+    
+      
+    
    
   </mat-sidenav-content>
 </mat-sidenav-container>
